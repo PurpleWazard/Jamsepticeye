@@ -4,29 +4,27 @@
 - [ ] finish todo list
 
 - [ ] main scene
-    - [ ] map art
-    - [ ] make 3 nights with pre placed graves with stats
-    - [ ] make nodes for guard to randomize to
+	- [ ] map art
+	- [ ] make 3 nights with pre placed graves with stats
+	- [ ] make nodes for guard to randomize to
 
-- [ ] player scene
-    - [ ] make art for player
-    - [ ] make moving animation for player
-    - [ ] make animation for player digging
+- [X] player scene
+	- [x] make art for player
+	- [x] make moving animation for player
+	- [ ] make animation for player digging
 
 - [ ] grave scene
-    - [ ] randomize stats value, freshness, other
-    - [ ] art ( make like 3 differnt versions )
-    - [ ] undug animation
+	- [ ] randomize stats value, freshness, other
+	- [ ] art ( make like 3 differnt versions )
+	- [ ] undug animation
 
 - [ ] title screen scene
-    - [ ] title / play button
+	- [ ] title / play button
 
 - [ ] result screen scene
-    - [ ] total earnings
+	- [ ] total earnings
 
-
-
-
-
-
-
+- [ ] music / sounds
+	- [ ] background music
+	- [ ] end of night music
+	- [ ] sfx
