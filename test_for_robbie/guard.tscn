@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4hxdcx0a13rb"]
+
+[ext_resource type="Script" uid="uid://csexu1dn4al4c" path="res://test_for_robbie/guard.gd" id="1_ilwp0"]
+[ext_resource type="Texture2D" uid="uid://b6t1jakkasqgy" path="res://icon.svg" id="2_ruh0t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30cdx"]
+size = Vector2(5, 5)
+
+[node name="guard" type="CharacterBody2D"]
+script = ExtResource("1_ilwp0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_30cdx")
+disabled = true
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-1.4210855e-14, 1.4210855e-14)
+scale = Vector2(0.0390625, 0.0390625)
+texture = ExtResource("2_ruh0t")

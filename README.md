@@ -1,1 +1,32 @@
-# Jamsepticeye
+# cadavar diger ( need to work on name)
+## Todo list
+
+- [ ] finish todo list
+
+- [ ] main scene
+    - [ ] map art
+    - [ ] make 3 nights with pre placed graves with stats
+    - [ ] make nodes for guard to randomize to
+
+- [ ] player scene
+    - [ ] make art for player
+    - [ ] make moving animation for player
+    - [ ] make animation for player digging
+
+- [ ] grave scene
+    - [ ] randomize stats value, freshness, other
+    - [ ] art ( make like 3 differnt versions )
+    - [ ] undug animation
+
+- [ ] title screen scene
+    - [ ] title / play button
+
+- [ ] result screen scene
+    - [ ] total earnings
+
+
+
+
+
+
+

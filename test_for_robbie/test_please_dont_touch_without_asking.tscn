@@ -1,0 +1,133 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxdooj8d3qr4s"]
+
+[ext_resource type="PackedScene" uid="uid://d2oocan08kx5a" path="res://test_for_robbie/points.tscn" id="1_s8dq5"]
+[ext_resource type="PackedScene" uid="uid://b4hxdcx0a13rb" path="res://test_for_robbie/guard.tscn" id="2_omgui"]
+
+[node name="Test please dont touch without asking" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -930.0
+offset_bottom = -532.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0050000004
+anchor_right = 0.0050000004
+offset_left = -0.11000013
+offset_right = 129.89
+offset_bottom = 56.0
+columns = 4
+
+[node name="point" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point2" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point3" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point4" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point5" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point6" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point7" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point8" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point9" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point10" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point11" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="point12" parent="GridContainer" instance=ExtResource("1_s8dq5")]
+layout_mode = 2
+
+[node name="guard" parent="." instance=ExtResource("2_omgui")]
+position = Vector2(21, 40)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(33, 22)
+zoom = Vector2(10, 10)
+
+[node name="markers" type="Node2D" parent="."]
+
+[node name="D5" type="Marker2D" parent="markers"]
+position = Vector2(71, 50)
+
+[node name="D4" type="Marker2D" parent="markers"]
+position = Vector2(51, 50)
+
+[node name="D3" type="Marker2D" parent="markers"]
+position = Vector2(31, 50)
+
+[node name="D2" type="Marker2D" parent="markers"]
+position = Vector2(11, 50)
+
+[node name="D1" type="Marker2D" parent="markers"]
+position = Vector2(-9, 50)
+
+[node name="C5" type="Marker2D" parent="markers"]
+position = Vector2(71, 30)
+
+[node name="C4" type="Marker2D" parent="markers"]
+position = Vector2(51, 30)
+
+[node name="C3" type="Marker2D" parent="markers"]
+position = Vector2(31, 30)
+
+[node name="C2" type="Marker2D" parent="markers"]
+position = Vector2(11, 30)
+
+[node name="C1" type="Marker2D" parent="markers"]
+position = Vector2(-9, 30)
+
+[node name="B5" type="Marker2D" parent="markers"]
+position = Vector2(71, 10)
+
+[node name="B4" type="Marker2D" parent="markers"]
+position = Vector2(51, 10)
+
+[node name="B3" type="Marker2D" parent="markers"]
+position = Vector2(31, 10)
+
+[node name="B2" type="Marker2D" parent="markers"]
+position = Vector2(11, 10)
+
+[node name="B1" type="Marker2D" parent="markers"]
+position = Vector2(-9, 10)
+
+[node name="A5" type="Marker2D" parent="markers"]
+position = Vector2(71, -10)
+
+[node name="A4" type="Marker2D" parent="markers"]
+position = Vector2(51, -10)
+
+[node name="A3" type="Marker2D" parent="markers"]
+position = Vector2(31, -10)
+
+[node name="A2" type="Marker2D" parent="markers"]
+position = Vector2(11, -10)
+
+[node name="A1" type="Marker2D" parent="markers"]
+position = Vector2(-9, -10)
