@@ -15,7 +15,7 @@
 
 - [ ] grave scene
     - [ ] randomize stats value, freshness, other
-    - [ ] art
+    - [ ] art ( make like 3 differnt versions )
     - [ ] undug animation
 
 - [ ] title screen scene
