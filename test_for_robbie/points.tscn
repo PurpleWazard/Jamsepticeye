@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2oocan08kx5a"]
+
+[ext_resource type="Script" uid="uid://berdxtd8mxhoc" path="res://test_for_robbie/graves.gd" id="1_8lwgp"]
+[ext_resource type="Texture2D" uid="uid://8v3gjotg1apg" path="res://art/pixil-frame-0 (19).png" id="2_kp02x"]
+
+[node name="point" type="Control"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1136.0
+offset_bottom = -632.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8lwgp")
+
+[node name="PixilFrame0(19)" type="Sprite2D" parent="."]
+texture = ExtResource("2_kp02x")
+vframes = 4
