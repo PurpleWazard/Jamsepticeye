@@ -8,9 +8,9 @@
     - [ ] make 3 nights with pre placed graves with stats
     - [ ] make nodes for guard to randomize to
 
-- [ ] player scene
-    - [ ] make art for player
-    - [ ] make moving animation for player
+- [X] player scene
+    - [x] make art for player
+    - [x] make moving animation for player
     - [ ] make animation for player digging
 
 - [ ] grave scene
@@ -24,6 +24,10 @@
 - [ ] result screen scene
     - [ ] total earnings
 
+- [ ] music / sounds
+    - [ ] background music
+    - [ ] end of night music
+    - [ ] sfx
 
 
 
