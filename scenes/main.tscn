@@ -6,6 +6,9 @@
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_o5qli")]
+<<<<<<< Updated upstream
 
 [node name="ghost" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(240, -88)
+=======
+>>>>>>> Stashed changes
