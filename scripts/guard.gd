@@ -24,4 +24,3 @@ func get_rand_node() -> void:
 
 func get_node_to_move() -> void:
 	current_node = current_node.Moveable_nodes.pick_random()
-

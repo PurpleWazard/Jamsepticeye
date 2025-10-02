@@ -41,3 +41,7 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 frame = 2
 frame_progress = 0.08386276
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-9, 6)
+polygon = PackedVector2Array(0, 1, 0, 1, 9, 60, 54, 60, 48, -46, 8, -69, -16, -41, 0, 0)
