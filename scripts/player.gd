@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 
-var SPEED = 300.0
+var SPEED = 100.0
 var RUN_SPEED = 800.0
 
 func _process(delta: float) -> void:
