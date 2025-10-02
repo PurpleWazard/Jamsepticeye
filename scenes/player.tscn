@@ -41,16 +41,3 @@ scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_qlg0r")
 frame = 2
 frame_progress = 0.08386276
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, -24)
-scale = Vector2(4, 4)
-shape = SubResource("CircleShape2D_g2els")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(14, 16)
-rotation = -0.14518301
-scale = Vector2(3.9999998, 3.9999998)
-shape = SubResource("RectangleShape2D_qhqgy")
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-11, 11, -15, 42, -1, 67, 43, 67, 44, 31, 27, -6, 32, -23, 43, -24, 43, -40, 31, -39, 15, -61, -11, -60, -19, -43, -26, -36, -26, -26, -17, -22)
