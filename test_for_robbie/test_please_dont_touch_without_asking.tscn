@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxdooj8d3qr4s"]
+[gd_scene load_steps=6 format=3 uid="uid://cxdooj8d3qr4s"]
 
 [ext_resource type="PackedScene" uid="uid://d2oocan08kx5a" path="res://test_for_robbie/points.tscn" id="1_s8dq5"]
+[ext_resource type="PackedScene" uid="uid://ch7eewongd0f6" path="res://scenes/ghost.tscn" id="2_dn0qf"]
 [ext_resource type="PackedScene" uid="uid://b4hxdcx0a13rb" path="res://test_for_robbie/guard.tscn" id="2_omgui"]
 [ext_resource type="Script" uid="uid://d3u2jqdj52lse" path="res://test_for_robbie/markers.gd" id="3_p5i41"]
 [ext_resource type="PackedScene" uid="uid://dsr3rc7r3yeql" path="res://scenes/player.tscn" id="4_wxmrx"]
@@ -66,8 +67,11 @@ layout_mode = 2
 [node name="point12" parent="GridContainer" instance=ExtResource("1_s8dq5")]
 layout_mode = 2
 
+[node name="ghost" parent="GridContainer" instance=ExtResource("2_dn0qf")]
+position = Vector2(1631.11, 426)
+
 [node name="guard" parent="." instance=ExtResource("2_omgui")]
-position = Vector2(4.0000005, 120.99999)
+position = Vector2(707.9999, 726.9999)
 scale = Vector2(10, 10)
 
 [node name="Timer" type="Timer" parent="guard"]
@@ -146,5 +150,6 @@ position = Vector2(-5.05, -7.3999996)
 position = Vector2(-269, -66)
 rotation = 0.10385602
 
+[connection signal="found_player" from="GridContainer/ghost" to="guard" method="_on_ghost_found_player"]
 [connection signal="connect_to_marker" from="guard" to="markers" method="_on_guard_connect_to_marker"]
 [connection signal="timeout" from="guard/Timer" to="guard" method="move"]

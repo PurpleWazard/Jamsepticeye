@@ -21,5 +21,5 @@ func new_pos() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		$AudioStreamPlayer2D.play()
-		found_player.emit()
+		found_player.emit(self)
 		
