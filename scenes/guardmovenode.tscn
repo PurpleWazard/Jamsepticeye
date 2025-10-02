@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://byxxft5o1b7iw"]
+
+[ext_resource type="Script" uid="uid://leqrsrhchhc7" path="res://scripts/guardmovenode.gd" id="1_kkge6"]
+
+[node name="guardmovenode" type="Node2D"]
+script = ExtResource("1_kkge6")
