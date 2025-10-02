@@ -13,6 +13,14 @@
 	- [x] make moving animation for player
 	- [ ] make animation for player digging
 
+- [ ] ghost scene
+    - [ ] ghost animation
+    - [ ] ghost script
+
+- [ ] guard scene
+    - [ ] guard animation
+    - [ ] guard script
+
 - [ ] grave scene
 	- [ ] randomize stats value, freshness, other
 	- [ ] art ( make like 3 differnt versions )
