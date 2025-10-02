@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch7eewongd0f6"]
+
+[ext_resource type="Script" uid="uid://21ru6a7dlfln" path="res://scripts/ghost.gd" id="1_l5lq6"]
+[ext_resource type="Texture2D" uid="uid://b6t1jakkasqgy" path="res://art/icon.svg" id="2_bbnym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_veat2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5mfnq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bbnym")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ghost" type="Area2D"]
+script = ExtResource("1_l5lq6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.490442, 6.510575)
+shape = SubResource("RectangleShape2D_veat2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5mfnq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="new_pos"]
