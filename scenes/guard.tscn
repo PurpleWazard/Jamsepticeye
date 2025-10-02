@@ -23,3 +23,7 @@ shape = SubResource("RectangleShape2D_ci2qi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_k0dx2")
+
+[node name="neck" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="neck"]

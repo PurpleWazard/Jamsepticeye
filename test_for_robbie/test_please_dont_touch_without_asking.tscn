@@ -143,8 +143,8 @@ position = Vector2(15.8, -7.45)
 position = Vector2(-5.05, -7.3999996)
 
 [node name="player" parent="." instance=ExtResource("4_wxmrx")]
-position = Vector2(-27, -13)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-269, -66)
+rotation = 0.10385602
 
 [connection signal="connect_to_marker" from="guard" to="markers" method="_on_guard_connect_to_marker"]
 [connection signal="timeout" from="guard/Timer" to="guard" method="move"]
