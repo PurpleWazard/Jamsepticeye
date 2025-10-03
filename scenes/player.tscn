@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dsr3rc7r3yeql"]
 
-[ext_resource type="Script" uid="uid://c0irlpqq1iysa" path="res://scripts/newplayer.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://b40o78lkyq232" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dnenvlqt8rpci" path="res://art/player.svg" id="2_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
@@ -33,6 +33,7 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
+scale = Vector2(0.38391417, 0.3760392)
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
 
@@ -42,6 +43,6 @@ sprite_frames = SubResource("SpriteFrames_qlg0r")
 frame_progress = 0.00092108385
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-position = Vector2(-9, 6)
-polygon = PackedVector2Array(0, 1, 0, 1, 9, 60, 54, 60, 48, -46, 8, -69, -16, -41, 0, 0)
+position = Vector2(-7.8142467, 5.3185954)
+scale = Vector2(0.85831165, 1.0533339)
+polygon = PackedVector2Array(-22.896387, 64.99394, 40.833054, 64.99394, 57, -46, 9, -78, -39, -46)

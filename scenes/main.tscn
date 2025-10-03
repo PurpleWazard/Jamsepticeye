@@ -7,12 +7,18 @@
 [node name="main" type="Node2D"]
 
 [node name="map" parent="." instance=ExtResource("3_sugp2")]
-position = Vector2(-224, -128)
-
-[node name="player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(31.999998, 32)
-scale = Vector2(0.4894912, 0.48284972)
+position = Vector2(-200, -80)
 
 [node name="ghost" parent="." instance=ExtResource("2_0wfyh")]
 position = Vector2(104, 56)
 scale = Vector2(0.27297026, 0.27297026)
+
+[node name="player" parent="." instance=ExtResource("1_o5qli")]
+position = Vector2(456, 184)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 0
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
