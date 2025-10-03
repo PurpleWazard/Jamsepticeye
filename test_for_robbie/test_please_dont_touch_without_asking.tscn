@@ -1,155 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxdooj8d3qr4s"]
+[gd_scene load_steps=4 format=3 uid="uid://cxdooj8d3qr4s"]
 
-[ext_resource type="PackedScene" uid="uid://d2oocan08kx5a" path="res://test_for_robbie/points.tscn" id="1_s8dq5"]
-[ext_resource type="PackedScene" uid="uid://ch7eewongd0f6" path="res://scenes/ghost.tscn" id="2_dn0qf"]
+[ext_resource type="Script" uid="uid://bk6cvk2yp4vcs" path="res://test_for_robbie/spots.gd" id="1_s8dq5"]
 [ext_resource type="PackedScene" uid="uid://b4hxdcx0a13rb" path="res://test_for_robbie/guard.tscn" id="2_omgui"]
-[ext_resource type="Script" uid="uid://d3u2jqdj52lse" path="res://test_for_robbie/markers.gd" id="3_p5i41"]
-[ext_resource type="PackedScene" uid="uid://dsr3rc7r3yeql" path="res://scenes/player.tscn" id="4_wxmrx"]
+[ext_resource type="Script" uid="uid://cb4tluaabehlp" path="res://test_for_robbie/guardnav.gd" id="3_p5i41"]
 
-[node name="Test please dont touch without asking" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -152.0
-offset_bottom = -254.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
+[node name="spots" type="Node2D"]
+script = ExtResource("1_s8dq5")
+nodes = Array[NodePath]([NodePath("Marker2D"), NodePath("Marker2D2"), NodePath("Marker2D3")])
 
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_direction = 2
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0050000004
-anchor_right = 0.0050000004
-offset_left = -93.11
-offset_top = -80.0
-offset_right = 1518.89
-offset_bottom = 1128.0
-columns = 4
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(74, 94)
 
-[node name="point" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(274, 524)
 
-[node name="point2" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point3" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point4" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point5" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point6" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point7" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point8" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point9" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point10" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point11" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="point12" parent="GridContainer" instance=ExtResource("1_s8dq5")]
-layout_mode = 2
-
-[node name="ghost" parent="GridContainer" instance=ExtResource("2_dn0qf")]
-position = Vector2(1631.11, 426)
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(772, 128)
 
 [node name="guard" parent="." instance=ExtResource("2_omgui")]
-position = Vector2(707.9999, 726.9999)
-scale = Vector2(10, 10)
-
-[node name="Timer" type="Timer" parent="guard"]
-wait_time = 5.0
-autostart = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(717, 497)
-zoom = Vector2(0.5, 0.5)
-
-[node name="markers" type="Node2D" parent="."]
+position = Vector2(384, 81.000015)
 scale = Vector2(20, 20)
 script = ExtResource("3_p5i41")
 
-[node name="D5" type="Marker2D" parent="markers"]
-position = Vector2(77.35, 57.4)
-
-[node name="D4" type="Marker2D" parent="markers"]
-position = Vector2(55.6, 57.4)
-
-[node name="D3" type="Marker2D" parent="markers"]
-position = Vector2(35, 57.35)
-
-[node name="D2" type="Marker2D" parent="markers"]
-position = Vector2(15.849999, 57.4)
-
-[node name="D1" type="Marker2D" parent="markers"]
-position = Vector2(-4.35, 57.4)
-
-[node name="C5" type="Marker2D" parent="markers"]
-position = Vector2(77, 36.4)
-
-[node name="C4" type="Marker2D" parent="markers"]
-position = Vector2(55.45, 36.4)
-
-[node name="C3" type="Marker2D" parent="markers"]
-position = Vector2(35.399998, 36.350002)
-
-[node name="C2" type="Marker2D" parent="markers"]
-position = Vector2(15.200001, 36.4)
-
-[node name="C1" type="Marker2D" parent="markers"]
-position = Vector2(-4.95, 36.3)
-
-[node name="B5" type="Marker2D" parent="markers"]
-position = Vector2(76.6, 15.599999)
-
-[node name="B4" type="Marker2D" parent="markers"]
-position = Vector2(56.850002, 15.749999)
-
-[node name="B3" type="Marker2D" parent="markers"]
-position = Vector2(35.9, 16.05)
-
-[node name="B2" type="Marker2D" parent="markers"]
-position = Vector2(15.649997, 15.999999)
-
-[node name="B1" type="Marker2D" parent="markers"]
-position = Vector2(-5.7, 15.9)
-
-[node name="A5" type="Marker2D" parent="markers"]
-position = Vector2(76.45, -7.25)
-
-[node name="A4" type="Marker2D" parent="markers"]
-position = Vector2(56.7, -7.2)
-
-[node name="A3" type="Marker2D" parent="markers"]
-position = Vector2(35.949997, -7.2)
-
-[node name="A2" type="Marker2D" parent="markers"]
-position = Vector2(15.8, -7.45)
-
-[node name="A1" type="Marker2D" parent="markers"]
-position = Vector2(-5.05, -7.3999996)
-
-[node name="player" parent="." instance=ExtResource("4_wxmrx")]
-position = Vector2(-269, -66)
-rotation = 0.10385602
-
-[connection signal="found_player" from="GridContainer/ghost" to="guard" method="_on_ghost_found_player"]
-[connection signal="connect_to_marker" from="guard" to="markers" method="_on_guard_connect_to_marker"]
-[connection signal="timeout" from="guard/Timer" to="guard" method="move"]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="guard"]
