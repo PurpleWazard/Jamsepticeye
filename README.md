@@ -20,11 +20,15 @@
 - [ ] guard scene
 	- [ ] guard animation
 	- [ ] guard script
+    - [ ] pathfinding
+    - [ ] works with ghost
 
 - [ ] grave scene
 	- [ ] randomize stats value, freshness, other
 	- [ ] art ( make like 3 differnt versions )
 	- [ ] undug animation
+    - [ ] some sort visual freshness
+    - [ ] enntrace ablity
 
 - [ ] title screen scene
 	- [ ] title / play button
