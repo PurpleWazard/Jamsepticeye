@@ -9,13 +9,13 @@ script = ExtResource("1_s8dq5")
 nodes = Array[NodePath]([NodePath("Marker2D"), NodePath("Marker2D2"), NodePath("Marker2D3")])
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(74, 94)
+position = Vector2(61, 33)
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(274, 524)
+position = Vector2(327, 163)
 
 [node name="Marker2D3" type="Marker2D" parent="."]
-position = Vector2(772, 128)
+position = Vector2(592, 239)
 
 [node name="guard" parent="." instance=ExtResource("2_omgui")]
 position = Vector2(384, 81.000015)
@@ -23,3 +23,5 @@ scale = Vector2(20, 20)
 script = ExtResource("3_p5i41")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="guard"]
+
+[connection signal="hello_points" from="guard" to="." method="_on_guard_hello_points"]

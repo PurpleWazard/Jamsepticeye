@@ -1,7 +1,11 @@
 extends Node2D
 @export var nodes: Array[NodePath]
-@onready var Nav_agent: NavigationAgent2D = $guard/NavigationAgent2D
-
+var guard
 func _process(delta: float) -> void:
-	Nav_agent.
+	pass
+
+
+func _on_guard_hello_points() -> void:
+	guard = get_node("guard")
+	guard.grab_points(nodes)
 	pass
