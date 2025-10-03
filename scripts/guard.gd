@@ -2,18 +2,16 @@ extends StaticBody2D
 
 @export var all_nodes: Array[NodePath]
 
-# Called when the node enters the scene tree for the first time.
-var current_node: Node2D = null
-func _ready() -> void:
-	pass # Replace with function body.
+var current_node = null
 
+func _ready():
+	get_rand_node()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	if current_node == null:
+func _process(delta: float) -> void:
+	if position.distance_to(current_node.position) <= 2 :
 		get_node_to_move()
 	else:
-		if position == current_node.position:
+		position += ( current_node.position - position ).normalized() * delta * 300
 
 
 	
@@ -23,4 +21,4 @@ func get_rand_node() -> void:
 	current_node = get_node(nodepath)
 
 func get_node_to_move() -> void:
-	current_node = current_node.Moveable_nodes.pick_random()
+	current_node = get_node(current_node.Moveable_nodes.pick_random())

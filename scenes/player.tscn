@@ -39,9 +39,9 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_qlg0r")
-frame = 2
-frame_progress = 0.08386276
+frame_progress = 0.00092108385
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
 position = Vector2(-9, 6)
 polygon = PackedVector2Array(0, 1, 0, 1, 9, 60, 54, 60, 48, -46, 8, -69, -16, -41, 0, 0)

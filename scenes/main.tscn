@@ -1,40 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://t1pq48iemnac"]
+[gd_scene load_steps=3 format=3 uid="uid://t1pq48iemnac"]
 
 [ext_resource type="PackedScene" uid="uid://dsr3rc7r3yeql" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://ch7eewongd0f6" path="res://scenes/ghost.tscn" id="2_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://byxxft5o1b7iw" path="res://scenes/guardmovenode.tscn" id="3_sugp2"]
-[ext_resource type="PackedScene" uid="uid://bnhybnc356eda" path="res://scenes/guard.tscn" id="4_jyhfs"]
-[ext_resource type="Script" uid="uid://ocqnw5pnp2pw" path="res://scripts/guard.gd" id="5_tbgi4"]
 
 [node name="main" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_o5qli")]
 
 [node name="ghost" parent="." instance=ExtResource("2_0wfyh")]
-
-[node name="guard-nodes" type="Node" parent="."]
-
-[node name="guardmovenode" parent="guard-nodes" node_paths=PackedStringArray("Moveable_nodes") instance=ExtResource("3_sugp2")]
-position = Vector2(192, 66)
-Moveable_nodes = [NodePath("../guardmovenode5"), NodePath("../guardmovenode2")]
-
-[node name="guardmovenode2" parent="guard-nodes" node_paths=PackedStringArray("Moveable_nodes") instance=ExtResource("3_sugp2")]
-position = Vector2(192, 192)
-Moveable_nodes = [NodePath("../guardmovenode"), NodePath("../guardmovenode3"), NodePath("../guardmovenode4")]
-
-[node name="guardmovenode3" parent="guard-nodes" node_paths=PackedStringArray("Moveable_nodes") instance=ExtResource("3_sugp2")]
-position = Vector2(320, 192)
-Moveable_nodes = [NodePath("../guardmovenode2"), NodePath("../guardmovenode5")]
-
-[node name="guardmovenode4" parent="guard-nodes" node_paths=PackedStringArray("Moveable_nodes") instance=ExtResource("3_sugp2")]
-position = Vector2(192, 320)
-Moveable_nodes = [NodePath("../guardmovenode2")]
-
-[node name="guardmovenode5" parent="guard-nodes" node_paths=PackedStringArray("Moveable_nodes") instance=ExtResource("3_sugp2")]
-position = Vector2(320, 64)
-Moveable_nodes = [NodePath("../guardmovenode"), NodePath("../guardmovenode3")]
-
-[node name="guard" parent="." instance=ExtResource("4_jyhfs")]
-position = Vector2(176, -66)
-script = ExtResource("5_tbgi4")
-all_nodes = Array[NodePath]([NodePath("../guard-nodes/guardmovenode"), NodePath("../guard-nodes/guardmovenode2"), NodePath("../guard-nodes/guardmovenode3"), NodePath("../guard-nodes/guardmovenode4"), NodePath("../guard-nodes/guardmovenode5")])
