@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends CharacterBody2D
 
 
 var SPEED = 100.0
@@ -20,4 +20,5 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.stop()
 	
 	$AnimatedSprite2D.speed_scale = local_speed * 0.005
-	position += direction * local_speed * delta
+	velocity = direction * local_speed
+	move_and_slide()
