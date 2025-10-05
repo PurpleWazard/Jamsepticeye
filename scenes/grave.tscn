@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://c5ottf6yrgqh5"]
+
+[ext_resource type="Script" uid="uid://dha1fixnjpst3" path="res://scripts/grave.gd" id="1_mlivn"]
+[ext_resource type="FontFile" uid="uid://cgriuca5gcwlf" path="res://fonts/Minecraftia-Regular.ttf" id="2_inmiy"]
+[ext_resource type="Texture2D" uid="uid://bvq8p7uk054wv" path="res://art/hole.png" id="2_lhpym"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe13i"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7cip"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aulm7"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7om2q"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8mm0"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8ail"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaav7"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2j88"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72fm5"]
+atlas = ExtResource("2_lhpym")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ung5a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe13i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7cip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aulm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7om2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8mm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8ail")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaav7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2j88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72fm5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhpym"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlivn"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="grave" type="Node2D"]
+script = ExtResource("1_mlivn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 7)
+sprite_frames = SubResource("SpriteFrames_ung5a")
+frame_progress = 0.020529767
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2.7340922, 2.7340922)
+shape = SubResource("RectangleShape2D_lhpym")
+
+[node name="Label" type="Label" parent="."]
+z_index = 2
+offset_left = -13.0
+offset_top = -18.0
+offset_right = 27.0
+offset_bottom = 41.0
+scale = Vector2(0.65778697, 0.63986856)
+theme_override_fonts/font = ExtResource("2_inmiy")
+theme_override_font_sizes/font_size = 8
+text = "[E]
+Dig"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 2
+offset_left = -15.0
+offset_top = 10.0
+offset_right = 15.0
+offset_bottom = 14.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_mlivn")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+position = Vector2(-6, -26)
+radius = 26.34
+vertices = PackedVector2Array(15, 11, -11, 11, -11, -18, 15, -18)
+affect_navigation_mesh = true

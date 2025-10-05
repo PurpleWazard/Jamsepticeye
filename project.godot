@@ -11,10 +11,16 @@ config_version=5
 [application]
 
 config/name="Jamsepticeye"
-run/main_scene="uid://t1pq48iemnac"
+run/main_scene="uid://cke61sor1p2hd"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://art/icon.svg"
 "<<<<<<<HEAD[rendering]textures/canvas_textures/default_texture_filter"=0
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=675
+window/stretch/mode="viewport"
 
 [input]
 

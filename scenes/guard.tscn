@@ -1,29 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnhybnc356eda"]
+[gd_scene load_steps=8 format=3 uid="uid://bnhybnc356eda"]
 
-[ext_resource type="Texture2D" uid="uid://b6t1jakkasqgy" path="res://art/icon.svg" id="1_m4fl1"]
+[ext_resource type="Script" uid="uid://ocqnw5pnp2pw" path="res://scripts/guard.gd" id="1_ci2qi"]
+[ext_resource type="Texture2D" uid="uid://d038bbsufgake" path="res://art/old-man.png" id="2_ci2qi"]
+[ext_resource type="Texture2D" uid="uid://dm2vdsjmox36s" path="res://art/light.png" id="2_k0dx2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ci2qi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0dx2"]
+atlas = ExtResource("2_ci2qi")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_k0dx2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygo2t"]
+atlas = ExtResource("2_ci2qi")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gn8tx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_m4fl1")
+"texture": SubResource("AtlasTexture_k0dx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygo2t")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
-[node name="guard" type="StaticBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_k0dx2"]
+radius = 36.40055
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(-6.541518, -6.541518)
-shape = SubResource("RectangleShape2D_ci2qi")
+[node name="guard" type="CharacterBody2D"]
+script = ExtResource("1_ci2qi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.28235295)
+position = Vector2(-0.3659439, -1.0474472)
+scale = Vector2(1.8635643, 1.9360173)
+texture = ExtResource("2_k0dx2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 108.57
+target_desired_distance = 82.66
+path_postprocessing = 1
+simplify_path = true
+avoidance_enabled = true
+radius = 30.02
+debug_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_k0dx2")
+position = Vector2(-0.365942, -4.047447)
+scale = Vector2(1.7127523, 1.7127523)
+sprite_frames = SubResource("SpriteFrames_gn8tx")
+frame_progress = 0.7769321
 
-[node name="neck" type="Node2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-0.3659439, -1.0474472)
 
-[node name="PointLight2D" type="PointLight2D" parent="neck"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_k0dx2")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
