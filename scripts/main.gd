@@ -29,8 +29,4 @@ func timeout():
 		Global.nights += 1
 		get_tree().change_scene_to_file("res://scenes/results.tscn")
 	else:
-		Global.nights = 0
-		Global.money = 0
-		Global.needed_total = 0
-		Global.time = 25
 		get_tree().change_scene_to_file("res://scenes/death.tscn")

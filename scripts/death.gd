@@ -33,4 +33,8 @@ func _process(delta: float) -> void:
 		total = 0
 	progress_bar.value = total * 100
 	if progress_bar.value >= 100:
+		Global.nights = 0
+		Global.money = 0
+		Global.needed_total = 0
+		Global.time = 25
 		get_tree().change_scene_to_file("res://scenes/ui.tscn")
