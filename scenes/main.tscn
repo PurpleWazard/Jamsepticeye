@@ -1,20 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://t1pq48iemnac"]
+[gd_scene load_steps=9 format=3 uid="uid://t1pq48iemnac"]
 
 [ext_resource type="PackedScene" uid="uid://dsr3rc7r3yeql" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://cshqx6rcj4pjq" path="res://scripts/main.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://ch7eewongd0f6" path="res://scenes/ghost.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://bgd6v4hcuc56b" path="res://scenes/map.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://c5ottf6yrgqh5" path="res://scenes/grave.tscn" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bnhybnc356eda" path="res://scenes/guard.tscn" id="5_tbgi4"]
+[ext_resource type="FontFile" uid="uid://cgriuca5gcwlf" path="res://fonts/Minecraftia-Regular.ttf" id="6_tefeu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
+size = Vector2(20, 105)
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_tefeu")
 
 [node name="map" parent="." instance=ExtResource("3_sugp2")]
 
-[node name="ghost" parent="." instance=ExtResource("2_0wfyh")]
+[node name="ghost" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_0wfyh")]
 position = Vector2(304, 136)
 scale = Vector2(0.27297026, 0.27297026)
+player = NodePath("../player")
 
 [node name="player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(280, 752)
+position = Vector2(284, 714)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(1.5258789e-05, 6.1035156e-05)
@@ -25,11 +33,167 @@ limit_top = 0
 limit_right = 1215
 limit_bottom = 840
 position_smoothing_enabled = true
-rotation_smoothing_enabled = true
 
 [node name="guard" parent="." node_paths=PackedStringArray("player", "ghost") instance=ExtResource("5_tbgi4")]
-position = Vector2(312, 488)
+position = Vector2(288, 626)
 player = NodePath("../player")
 ghost = NodePath("../ghost")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+z_index = 14
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.5
+offset_right = 95.5
+offset_bottom = 73.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("6_tefeu")
+theme_override_font_sizes/font_size = 40
+text = "
+"
+horizontal_alignment = 1
+
+[node name="graves" type="Node2D" parent="."]
+
+[node name="grave" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(80, 200)
+
+[node name="grave2" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(176, 200)
+
+[node name="grave3" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(112, 296)
+
+[node name="grave4" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(176, 296)
+
+[node name="grave5" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(240, 296)
+
+[node name="grave6" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(240, 400)
+
+[node name="grave7" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(112, 400)
+
+[node name="grave8" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(208, 520)
+
+[node name="grave9" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(144, 616)
+
+[node name="grave10" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(80, 616)
+
+[node name="grave11" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(304, 400)
+
+[node name="grave12" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(368, 400)
+
+[node name="grave13" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(528, 199)
+
+[node name="grave14" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(560, 296)
+
+[node name="grave15" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(624, 296)
+
+[node name="grave16" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(560, 392)
+
+[node name="grave17" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(624, 392)
+
+[node name="grave18" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(592, 592)
+
+[node name="grave19" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(528, 583)
+
+[node name="grave20" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(720, 487)
+
+[node name="grave21" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(816, 487)
+
+[node name="grave22" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(816, 584)
+
+[node name="grave23" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(880, 488)
+
+[node name="grave24" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(944, 496)
+
+[node name="grave25" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(976, 583)
+
+[node name="grave26" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(976, 392)
+
+[node name="grave27" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(912, 296)
+
+[node name="grave28" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(1072, 296)
+
+[node name="grave29" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(1104, 200)
+
+[node name="grave30" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(848, 200)
+
+[node name="grave31" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(752, 199)
+
+[node name="grave32" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(688, 200)
+
+[node name="grave33" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(624, 199)
+
+[node name="grave34" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(368, 200)
+
+[node name="grave35" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(1168, 296)
+
+[node name="grave36" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(1040, 584)
+
+[node name="grave37" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(432, 584)
+
+[node name="grave38" parent="graves" instance=ExtResource("4_jyhfs")]
+position = Vector2(306, 192)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(240, 727.5)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(97, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(240, 727.5)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(21, 39)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(267, 728)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_o6xl0")
 
 [connection signal="found_player" from="ghost" to="guard" method="_get_ghost"]

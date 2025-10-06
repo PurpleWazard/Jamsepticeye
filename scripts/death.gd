@@ -2,7 +2,10 @@ extends Control
 
 
 @export var progress_bar: ProgressBar
-@export var label: RichTextLabel
+@export var message: RichTextLabel
+@export var nights: RichTextLabel
+@export var money: RichTextLabel
+@export var money_needed: RichTextLabel
 
 var death_messages: Array[String] = [
 "I told you not get get caught",
@@ -18,7 +21,10 @@ var death_messages: Array[String] = [
 
 var total: float = 0
 func _ready() -> void:
-	label.text = death_messages.pick_random()
+	message.text = death_messages.pick_random()
+	nights.text = "nights: " + str(Global.nights)
+	money.text = "money earned: " + str(Global.money)
+	money_needed.text = "money needed: " + str(Global.needed_total)
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_accept"):

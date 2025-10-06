@@ -8,7 +8,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1m88v"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="death" type="Control" node_paths=PackedStringArray("progress_bar", "label")]
+[node name="death" type="Control" node_paths=PackedStringArray("progress_bar", "message", "nights", "money", "money_needed")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +17,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w8wr1")
 progress_bar = NodePath("MarginContainer/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ProgressBar")
-label = NodePath("MarginContainer/MarginContainer/VBoxContainer/RichTextLabel")
+message = NodePath("MarginContainer/MarginContainer/VBoxContainer/messgae")
+nights = NodePath("MarginContainer/MarginContainer/VBoxContainer/VBoxContainer/nights")
+money = NodePath("MarginContainer/MarginContainer/VBoxContainer/VBoxContainer/money")
+money_needed = NodePath("MarginContainer/MarginContainer/VBoxContainer/VBoxContainer/money_needed")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 z_index = 6
@@ -38,8 +41,43 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_constants/separation = 33
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="nights" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_tjai8")
+text = "come on man"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="money" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_tjai8")
+text = "nights"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="money_needed" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_tjai8")
+text = "test
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="messgae" type="RichTextLabel" parent="MarginContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("2_tjai8")

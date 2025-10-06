@@ -414,21 +414,20 @@ custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_lo5v2")
 text = "Hey man,                                                                                                             
-this is gunna sound a little weird but,
- i have a job for you. my univirsity is very low on
- prisioner cadavers. we use  these for medical reshearch. If im 
+this is going to sound a little weird but,
+ i have a job for you. My university is very low on
+ prisoner cadavers. we use  these for medical research. If im 
 being frank, I need you to get us bodies. My PHD is on the line. but hey,
-the univirsity will pay and im talking big $$$$ so please give it some thought.
+the university will pay and im talking big $$$$ so please give it some thought.
 
 ps: this is what you need to know. 
 use WASD to move and E to Dig
-avoid the nightwatch or youre busted for sure
+you're a sneeky guy  [SHIFT] for sprint
+avoid the nightwatch or you're busted for sure
 fresher the body the more money 
 you have limited time so be quick
-each night youll need to make more money
-otherwise your cripling dept with get you.
-            																															
-																																										-M 
+each night you'll need to make more money
+otherwise your crippling dept with get you.
 "
 fit_content = true
 scroll_active = false

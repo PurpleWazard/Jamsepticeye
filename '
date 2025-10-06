@@ -1,0 +1,16 @@
+extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+
+	Global.time += 5
+	$Timer.timeout.connect(timeout)
+	$Timer.wait_time = Global.time
+
+
+func _process(delta: float) -> void:
+	$CanvasLayer/Label.text = str($Timer.time_left)
+
+func timeout():
+	get_tree().change_scene_to_file("")

@@ -118,9 +118,3 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_mlivn")
 step = 1.0
 value = 50.0
 show_percentage = false
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
-position = Vector2(-6, -26)
-radius = 26.34
-vertices = PackedVector2Array(15, 11, -11, 11, -11, -18, 15, -18)
-affect_navigation_mesh = true

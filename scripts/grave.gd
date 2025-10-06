@@ -12,7 +12,7 @@ var being_dug: bool = false
 var is_fresh: bool = false
 var value: int = 0
 
-var total_dig_time: float = randf_range(3.0, 8.0) 
+var total_dig_time: float = randf_range(1.0, 2.0) 
 
 
 
@@ -57,6 +57,7 @@ func _process(delta: float) -> void:
 			$AnimatedSprite2D.stop()
 			$AnimatedSprite2D.frame = 8
 			perm = true
+			Global.money += value
 			is_focused = false
 			$Label.hide()
 			$ProgressBar.hide()
